@@ -55,7 +55,7 @@ class action {
 
         if (!ok) return
 
-        await this.webapi.user.modifyPassword({mobile:form.mobile, password: form.password})
+        await this.webapi.user.resetPassword({mobile:form.mobile, password: form.password})
         this.metaAction.toast('success', `重设密码成功`)
 
         this.goLogin()
